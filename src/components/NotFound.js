@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 
+import { Button, NotFoundContainer } from "../index.styled";
+
 const NotFound = () => {
   return (
-    <div>
+    <NotFoundContainer>
       <h1>Page not found</h1>
       <Link to="/">
-        <button>Main screen</button>
+        <Button>Main screen</Button>
       </Link>
-    </div>
+    </NotFoundContainer>
   );
 };
 

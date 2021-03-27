@@ -1,15 +1,22 @@
 import { Link } from "react-router-dom";
 
+import { Button, MainScreenContainer } from "../index.styled";
+
 const MainScreen = () => {
   return (
-    <div>
-      <Link to="/pokemons">
-        <button>Pokemons</button>
-      </Link>
-      <Link to="/digimons">
-        <button>Digimons</button>
-      </Link>
-    </div>
+    <MainScreenContainer>
+      <h1>Main menu</h1>
+
+      <div>
+        <Link to="/pokemons">
+          <Button>Pokemons</Button>
+        </Link>
+
+        <Link to="/digimons">
+          <Button>Digimons</Button>
+        </Link>
+      </div>
+    </MainScreenContainer>
   );
 };
 
