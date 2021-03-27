@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Redirect, useParams } from "react-router";
 
-import { fetchPokemon } from "../../utils/data";
+import { fetchPokemon } from "../../services/pokemonServices";
 import Loading from "../Loading";
 
 const withFetchPokemon = (Component) => () => {

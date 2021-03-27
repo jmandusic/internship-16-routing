@@ -34,8 +34,3 @@ export const deletePokemon = (pokemon) =>
       "Content-type": "application/json",
     },
   }).then((response) => response.json());
-
-export const fetchDigimons = () =>
-  fetch("http://localhost:5000/digimons").then((response) => {
-    return response.json();
-  });

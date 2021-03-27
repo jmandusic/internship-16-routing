@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Redirect } from "react-router";
 import { Link } from "react-router-dom";
 
-import { deletePokemon } from "../../utils/data";
+import { deletePokemon } from "../../services/pokemonServices";
 import withFetchPokemon from "./withFetchPokemon";
 
 const PokemonDelete = ({ pokemon }) => {

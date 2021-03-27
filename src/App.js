@@ -2,7 +2,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import MainScreen from "./components/MainScreen";
 import Pokemons from "./components/Pokemons";
-import Digimons from "./components/Digimons/DigimonList";
+import Digimons from "./components/Digimons";
 import NotFound from "./components/NotFound";
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
           <Pokemons />
         </Route>
 
-        <Route exact path="/digimons">
+        <Route path="/digimons">
           <Digimons />
         </Route>
 

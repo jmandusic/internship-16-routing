@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Redirect, useParams } from "react-router";
 
-import { updatePokemon } from "../../utils/data";
+import { updatePokemon } from "../../services/pokemonServices";
 import PokemonForm from "./PokemonForm";
 import withFetchPokemon from "./withFetchPokemon";
 

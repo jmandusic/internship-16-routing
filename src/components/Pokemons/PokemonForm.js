@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { fetchPokemons } from "../../utils/data";
+import { fetchPokemons } from "../../services/pokemonServices";
 
 const PokemonForm = ({ onSubmit, pokemon }) => {
   const [pokemonNames, setPokemonNames] = useState(null);

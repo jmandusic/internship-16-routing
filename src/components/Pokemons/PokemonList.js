@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchPokemons } from "../../utils/data";
+
+import { fetchPokemons } from "../../services/pokemonServices";
 import Loading from "../Loading";
 
 const PokemonList = () => {
