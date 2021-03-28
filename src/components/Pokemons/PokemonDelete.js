@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { deletePokemon } from "../../services/pokemonServices";
 import withFetchPokemon from "./withFetchPokemon";
+import { ConfirmationModalContainer } from "../index.styled";
+import { Button } from "../../index.styled";
 
 const PokemonDelete = ({ pokemon }) => {
   const [isPokemonDeleted, setIsPokemonDeleted] = useState(false);
@@ -18,13 +20,16 @@ const PokemonDelete = ({ pokemon }) => {
   }
 
   return (
-    <div>
-      <h2>Are you sure you want to continue</h2>
-      <button onClick={deletePokemonHandler}>Yes</button>
-      <Link to={`/pokemons/${pokemon?.id}`}>
-        <button>No, go back</button>
-      </Link>
-    </div>
+    <ConfirmationModalContainer>
+      <h1>Are you sure you want to continue?</h1>
+
+      <div>
+        <Button onClick={deletePokemonHandler}>Yes</Button>
+        <Link to={`/pokemons/${pokemon?.id}`}>
+          <Button>No, go back</Button>
+        </Link>
+      </div>
+    </ConfirmationModalContainer>
   );
 };
 

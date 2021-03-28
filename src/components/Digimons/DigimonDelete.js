@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { deleteDigimon } from "../../services/digimonServices";
 import withFetchDigimon from "./withFetchDigimon";
+import { ConfirmationModalContainer } from "../index.styled";
+import { Button } from "../../index.styled";
 
 const DigimonDelete = ({ digimon }) => {
   const [isDigimonDeleted, setIsDigimonDeleted] = useState(false);
@@ -18,13 +20,16 @@ const DigimonDelete = ({ digimon }) => {
   }
 
   return (
-    <div>
-      <h2>Are you sure you want to continue</h2>
-      <button onClick={deleteDigimonHandler}>Yes</button>
-      <Link to={`/digimons/${digimon?.id}`}>
-        <button>No, go back</button>
-      </Link>
-    </div>
+    <ConfirmationModalContainer>
+      <h1>Are you sure you want to continue?</h1>
+
+      <div>
+        <Button onClick={deleteDigimonHandler}>Yes</Button>
+        <Link to={`/digimons/${digimon?.id}`}>
+          <Button>No, go back</Button>
+        </Link>
+      </div>
+    </ConfirmationModalContainer>
   );
 };
 

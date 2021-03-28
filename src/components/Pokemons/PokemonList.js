@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { fetchPokemons } from "../../services/pokemonServices";
 import Loading from "../Loading";
+import { ListContainer } from "../index.styled";
+import { Button } from "../../index.styled";
 
 const PokemonList = () => {
   const [pokemons, setPokemons] = useState(null);
@@ -16,21 +18,25 @@ const PokemonList = () => {
   }
 
   return (
-    <div>
+    <ListContainer>
+      <div>
+        <h3>Pokemon list:</h3>
+
+        <Link to="/">
+          <Button>Main menu</Button>
+        </Link>
+      </div>
+
       {pokemons.map((pokemon) => (
         <Link key={pokemon.id} to={`/pokemons/${pokemon.id}`}>
-          {pokemon.name}
+          <p>{pokemon.name}</p>
         </Link>
       ))}
 
       <Link to="/pokemons/create">
-        <button>Add new pokemon</button>
+        <Button>Add new pokemon</Button>
       </Link>
-
-      <Link to="/">
-        <button>Main menu</button>
-      </Link>
-    </div>
+    </ListContainer>
   );
 };
 

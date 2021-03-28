@@ -1,26 +1,21 @@
 {
   "pokemons": [
     {
-      "name": "pokemon5",
-      "description": "alkdmad",
-      "id": 5
+      "name": "Pokemon2",
+      "description": "description2",
+      "id": 2
+    },
+    {
+      "name": "Pokemon3",
+      "description": "description3",
+      "id": 3
     }
   ],
   "digimons": [
     {
-      "name": "digimon1",
-      "description": "askajdaldk",
-      "id": 1
-    },
-    {
-      "name": "digimon2",
-      "description": "JNWRIOF",
+      "name": "Digimon2",
+      "description": "description2",
       "id": 2
-    },
-    {
-      "name": "digimon3 ",
-      "description": "ajbfniaef",
-      "id": 3
     }
   ]
 }

@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { fetchDigimons } from "../../services/digimonServices";
 import Loading from "../Loading";
+import { Button } from "../../index.styled";
+import { ListContainer } from "../index.styled";
 
 const DigimonList = () => {
   const [digimons, setDigimons] = useState(null);
@@ -15,21 +18,25 @@ const DigimonList = () => {
   }
 
   return (
-    <div>
+    <ListContainer>
+      <div>
+        <h3>Digimon list:</h3>
+
+        <Link to="/">
+          <Button>Main menu</Button>
+        </Link>
+      </div>
+
       {digimons.map((digimon) => (
         <Link key={digimon.id} to={`/digimons/${digimon.id}`}>
-          {digimon.name}
+          <p>{digimon.name}</p>
         </Link>
       ))}
 
       <Link to="/digimons/create">
-        <button>Add new digimon</button>
+        <Button>Add new digimon</Button>
       </Link>
-
-      <Link to="/">
-        <button>Main menu</button>
-      </Link>
-    </div>
+    </ListContainer>
   );
 };
 

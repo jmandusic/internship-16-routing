@@ -17,8 +17,6 @@ export const NotFoundContainer = styled.div`
     color: #62dafb;
     text-align: center;
     font-size: 35px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   @media screen and (min-width: 1440px) {
@@ -40,6 +38,7 @@ export const Button = styled.button`
   font-weight: bold;
   transition: opacity 0.2s ease-in-out;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     opacity: 0.7;
@@ -68,8 +67,6 @@ export const MainScreenContainer = styled.div`
     color: #62dafb;
     text-align: center;
     font-size: 35px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   div {
@@ -120,8 +117,6 @@ export const LoadingContainer = styled.div`
     color: #62dafb;
     text-align: center;
     font-size: 35px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
 
   div {

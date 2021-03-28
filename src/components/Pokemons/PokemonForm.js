@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
 import { fetchPokemons } from "../../services/pokemonServices";
+import { Form } from "../index.styled";
+import { Button } from "../../index.styled";
 
 const PokemonForm = ({ onSubmit, pokemon }) => {
   const [pokemonNames, setPokemonNames] = useState(null);
@@ -49,7 +51,7 @@ const PokemonForm = ({ onSubmit, pokemon }) => {
   };
 
   return (
-    <form onSubmit={pokemonSubmitHandler}>
+    <Form onSubmit={pokemonSubmitHandler}>
       <label>Pokemon name:</label>
       <input value={pokemonName} onChange={changeHandler(setPokemonName)} />
 
@@ -59,9 +61,9 @@ const PokemonForm = ({ onSubmit, pokemon }) => {
         onChange={changeHandler(setPokemonDescription)}
       />
 
-      <button>Submit</button>
-      <p>{errorMessage}</p>
-    </form>
+      <Button>Submit</Button>
+      {errorMessage && <span>{errorMessage}</span>}
+    </Form>
   );
 };
 

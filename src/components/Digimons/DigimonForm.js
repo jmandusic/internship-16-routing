@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
 import { fetchDigimons } from "../../services/digimonServices";
+import { Form } from "../index.styled";
+import { Button } from "../../index.styled";
 
 const DigimonForm = ({ onSubmit, digimon }) => {
   const [digimonNames, setDigimonNames] = useState(null);
@@ -49,7 +51,7 @@ const DigimonForm = ({ onSubmit, digimon }) => {
   };
 
   return (
-    <form onSubmit={digimonSubmitHandler}>
+    <Form onSubmit={digimonSubmitHandler}>
       <label>Digimon name:</label>
       <input value={digimonName} onChange={changeHandler(setDigimonName)} />
 
@@ -59,9 +61,9 @@ const DigimonForm = ({ onSubmit, digimon }) => {
         onChange={changeHandler(setDigimonDescription)}
       />
 
-      <button>Submit</button>
-      <p>{errorMessage}</p>
-    </form>
+      <Button>Submit</Button>
+      {errorMessage && <span>{errorMessage}</span>}
+    </Form>
   );
 };
 
